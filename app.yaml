@@ -15,6 +15,7 @@ skip_files:
 - ^(.*)\.komodoproject$
 - ^(.*)pyc$
 - README.md
+- LICENSE
 
 handlers:
 - url: /index.html(.*)
