@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<title>Kurzy ČNB</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+<h1>Kurzy ČNB</h1>
+
+<p>
+    Jednoduchá aplikace pro přístup k aktuálním a historickým kurzům vypsaných ČNB. A to i pomocí
+    <a href="http://www.html5rocks.com/en/tutorials/cors/">CORS</a>.
+</p>
+
+<p>
+    CORS je pro děcka a pro lidi co používají frameworky jako Tailbone a Angular.
+    Použití je jednoduché a následují příklady
+</p>
+
+<p>
+    API je jednoduše verzované, zde naleznete jen nejnovější verzi.    
+</p>
+
+<dl>
+    <dt>http://kurzycnb.appspot.com/v1/aktualni</dt>
+    <dd>
+        Pro získání aktuálního kurzu (dnešní den)
+    </dd>
+    
+    <dt>http://kurzycnb.appspot.com/v1/&lt;rok&gt;/&lt;měsíc&gt;/&lt;den&gt;</dt>
+    <dd>
+        Pro získání historického data definovaného pomocí parametrů rok, měsíc a den.
+        Aplikace záměrně neposkytuje data před rokem 2009 a taktéž odmítne narozdíl od
+        rozhraní ČNB vrátit výsledek pro data budoucí.
+    </dd>
+</dl>
+        
+</body>
+</html>
