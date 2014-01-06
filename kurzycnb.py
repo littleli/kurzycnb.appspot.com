@@ -4,8 +4,8 @@ from webapp2_extras import routes
 
 app = webapp2.WSGIApplication([
     routes.PathPrefixRoute('/v1', [
-        webapp2.Route('/aktualni', handler='rates.RatesHandler:get_current', name='current-rates'),
-        webapp2.Route('/<year:\d{4}>/<month:\d{1,2}>/<day:\d{1,2}>', handler='rates.RatesHandler:get_historic', name='historic-rates'),
+        webapp2.Route('/aktualni', handler='rates.RatesHandler:get_current', name='current-rates', methods = ['GET']),
+        webapp2.Route('/<year:\d{4}>/<month:\d{1,2}>/<day:\d{1,2}>', handler='rates.RatesHandler:get_historic', name='historic-rates', methods = ['GET']),
         webapp2.Route('/', handler='rates.RatesHandler:index', name='index')
     ]),
     webapp2.Route('/', handler='rates.RatesHandler:index', name='index')

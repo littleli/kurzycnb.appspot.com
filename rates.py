@@ -111,5 +111,4 @@ class RatesHandler(webapp2.RequestHandler):
         self.response.write(json.dumps(fetched.to_dict(), cls=DateEncoder))
   
   def index(self):
-    self.response.headers['Location'] = "https://kurzycnb.appspot.com/index.html"
-    self.response.set_status(302)
+    return webapp2.redirect('/index.html', True)
