@@ -5,7 +5,6 @@ api_version: 1
 threadsafe: true
 
 inbound_services:
-- warmup
 
 builtins:
 - deferred: on
@@ -24,6 +23,8 @@ handlers:
 - url: /.*\.css
   static_dir: pages
 - url: /.*\.js
+  static_dir: pages
+- url: /.*\.ico
   static_dir: pages
 - url: /.*
   script: kurzycnb.app
