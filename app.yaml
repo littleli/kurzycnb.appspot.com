@@ -20,11 +20,10 @@ handlers:
 - url: /index.html(.*)
   static_files: pages/index.html
   upload: pages/index.html
-- url: /.*\.css
-  static_dir: pages
-- url: /.*\.js
-  static_dir: pages
-- url: /.*\.ico
+- url: /favicon.ico
+  static_files: pages/favicon.ico
+  upload: pages/favicon.ico
+- url: /static
   static_dir: pages
 - url: /.*
   script: kurzycnb.app
